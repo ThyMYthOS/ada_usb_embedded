@@ -1,0 +1,334 @@
+# THIS IS A MACHINE-GENERATED FILE. DO NOT EDIT MANUALLY.
+
+[solution]
+[solution.context]
+solved = true
+[[solution.state]]
+crate = "atomic"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~0.5"
+[solution.state.release]
+authors = [
+"Fabien Chouteau",
+]
+description = "Standalone Ada/SPARK bindings to GCC atomic built-ins"
+licenses = "MIT"
+maintainers = [
+"Fabien Chouteau <chouteau@adacore.com>",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "atomic"
+tags = [
+"atomic",
+"spark",
+"embedded",
+"nostd",
+]
+version = "0.5.0"
+website = "https://github.com/Fabien-Chouteau/atomic"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = false
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.configuration.variables]
+[solution.state.release.configuration.variables.Backend]
+default = "Intrinsic"
+type = "Enum"
+values = [
+"Intrinsic",
+"armv6m",
+"rp2040_spinlock",
+]
+[solution.state.release.configuration.variables.RP2040_Spinlock_ID]
+default = 31
+first = 0
+last = 31
+type = "Integer"
+[solution.state.release.origin]
+commit = "14c344ccfb14bcba0feadb5303831d6409f65b5e"
+url = "git+https://github.com/Fabien-Chouteau/atomic.git"
+[[solution.state]]
+crate = "bbqueue"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~0.3.0"
+[solution.state.release]
+authors = [
+"Fabien Chouteau",
+]
+description = "DMA friendly lock-free BipBuffer"
+licenses = "MIT"
+long-description = "An Ada/SPARK proved implementation of James Munns'\nBBQueue (https://github.com/jamesmunns/bbqueue)"
+maintainers = [
+"Fabien Chouteau <chouteau@adacore.com>",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "bbqueue"
+tags = [
+"spark",
+"nostd",
+"embedded",
+"lockfree",
+"dma",
+"bipbuffer",
+]
+version = "0.3.2"
+website = "https://github.com/Fabien-Chouteau/bbqueue-spark"
+[solution.state.release.build-switches]
+[solution.state.release.build-switches.release]
+runtime_checks = "none"
+[solution.state.release.origin]
+commit = "5e5007cf9d767f06c12b737a155eb608c58942b3"
+url = "git+https://github.com/Fabien-Chouteau/bbqueue-spark.git"
+[[solution.state.release.depends-on]]
+atomic = "~0.5"
+gnat = ">=10"
+[[solution.state]]
+crate = "cortex_m"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~0.5"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "Drivers for Cortex-M micro-controllers (NVIC, SysTick, etc.)"
+licenses = "BSD-3-Clause"
+long-description = "# cortex-m\n\nAda drivers for the peripherals of ARM Cortex-M micro-controllers\n(NVIC,\\nSysTick, etc.)\n\nThis crate is a snapshot of the `Cortex-M` support in [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/arch/ARM/cortex_m).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "cortex_m"
+tags = [
+"embedded",
+"arm",
+"nostd",
+]
+version = "0.5.0"
+website = "https://github.com/AdaCore/Ada_Drivers_Library/"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = false
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.configuration.variables]
+[solution.state.release.configuration.variables.core]
+type = "Enum"
+values = [
+"m0",
+"m0p",
+"m4",
+"m4f",
+"m7f",
+"m7df",
+]
+[solution.state.release.origin]
+commit = "39667d15f4df10da6ecfd94af47c463bb54ff2d6"
+url = "git+https://github.com/Fabien-Chouteau/cortex-m.git"
+[[solution.state.release.depends-on]]
+gnat_arm_elf = ">=12"
+hal = "~0.3"
+[[solution.state]]
+crate = "gnat"
+fulfilment = "solved"
+pinned = false
+shared = true
+transitivity = "indirect"
+versions = ">=10"
+[solution.state.release]
+auto-gpr-with = false
+description = "The GNAT Ada compiler - ARM cross-compiler"
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnat_arm_elf"
+provides = [
+"gnat=13.2.1",
+]
+version = "13.2.1"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.environment]
+[solution.state.release.environment.PATH]
+prepend = "${CRATE_ROOT}/bin"
+[solution.state.release.origin]
+binary = true
+hashes = [
+"sha256:db1e92839c4d987edc4108e2c4416e38d29e6a53df428338bdd814706f25435f",
+]
+url = "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-13.2.0-1/gnat-arm-elf-linux64-13.2.0-1.tar.gz"
+[[solution.state]]
+crate = "gnat_arm_elf"
+fulfilment = "solved"
+pinned = false
+shared = true
+transitivity = "indirect"
+versions = "(^13) & (>=12)"
+[solution.state.release]
+auto-gpr-with = false
+description = "The GNAT Ada compiler - ARM cross-compiler"
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnat_arm_elf"
+provides = [
+"gnat=13.2.1",
+]
+version = "13.2.1"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.environment]
+[solution.state.release.environment.PATH]
+prepend = "${CRATE_ROOT}/bin"
+[solution.state.release.origin]
+binary = true
+hashes = [
+"sha256:db1e92839c4d987edc4108e2c4416e38d29e6a53df428338bdd814706f25435f",
+]
+url = "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-13.2.0-1/gnat-arm-elf-linux64-13.2.0-1.tar.gz"
+[[solution.state]]
+crate = "hal"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "indirect"
+versions = "~0.3"
+[solution.state.release]
+description = "Hardware Abstraction Layer (HAL)"
+licenses = "BSD-3-Clause"
+long-description = "# hal\n\nHardware Abstraction Layer: interfaces definitions to abstract access to common\nhardware devices and protocols\n\nThis crate is a snapshot of the `hal` in [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/tree/master/hal/src).\n\nAny bug report, issue, contribution must be adressed to the [Ada Drivers\nLibrary](https://github.com/AdaCore/Ada_Drivers_Library/) repo.\n\n"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "hal"
+project-files = [
+"hal.gpr",
+]
+tags = [
+"embedded",
+"hal",
+"nostd",
+]
+version = "0.3.0"
+[solution.state.release.origin]
+commit = "095ae5140d55ba5bc3905295d1029e79e1f11d43"
+url = "git+https://github.com/Fabien-Chouteau/hal.git"
+[[solution.state]]
+crate = "rp2040_hal"
+fulfilment = "solved"
+pinned = false
+shared = false
+transitivity = "direct"
+versions = "^2.2.0"
+[solution.state.release]
+authors = [
+"Jeremy Grosser",
+]
+description = "Drivers and HAL for the RP2040 micro-controller family"
+licenses = "BSD-3-Clause"
+maintainers = [
+"Jeremy Grosser <jeremy@synack.me>",
+]
+maintainers-logins = [
+"JeremyGrosser",
+]
+name = "rp2040_hal"
+tags = [
+"embedded",
+"nostd",
+"rp2040",
+"raspberrypi",
+"drivers",
+]
+version = "2.2.1"
+website = "https://pico-doc.synack.me/"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = false
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.configuration.values]
+[solution.state.release.configuration.values.atomic]
+Backend = "armv6m"
+[solution.state.release.configuration.values.cortex_m]
+core = "m0p"
+[solution.state.release.configuration.variables]
+[solution.state.release.configuration.variables.Flash_Chip]
+default = "w25qxx"
+type = "Enum"
+values = [
+"w25qxx",
+"generic_qspi",
+"generic_03",
+]
+[solution.state.release.configuration.variables.Interrupts]
+default = "hal"
+type = "Enum"
+values = [
+"hal",
+"bb_runtimes",
+]
+[solution.state.release.configuration.variables.Use_Startup]
+default = true
+type = "Boolean"
+[solution.state.release.origin]
+commit = "dd57b8f84f98a51236154c166421602a21ce9605"
+url = "git+https://github.com/JeremyGrosser/rp2040_hal.git"
+[[solution.state.release.depends-on]]
+atomic = "~0.5"
+cortex_m = "~0.5"
+gnat_arm_elf = "^13"
+hal = "~0.3"
+usb_embedded = "~0.3"
+[[solution.state]]
+crate = "usb_embedded"
+fulfilment = "linked"
+pinned = false
+transitivity = "direct"
+versions = "~0.3"
+[solution.state.link]
+lockfiled = true
+path = ".."
+

@@ -1,0 +1,28 @@
+name = "demo"
+description = "USB Serial Echo"
+version = "0.0.0"
+
+[build-switches]
+"*".Ada_Version = "Ada2022"
+
+[configuration.variables]
+USB_Manufacturer = {type = "String", default = "Alire"}
+USB_Product = {type = "String", default = "Serial Demo"}
+USB_Serial_Number = {type = "String", default = "1234"}
+USB_Vendor_Id = {type = "Integer", first = 0, last = 0xFFFF, default = 0x6666}
+USB_Product_Id = {type = "Integer", first = 0, last = 0xFFFF, default = 0x1234}
+USB_Bcd_Device = {type = "Integer", first = 0, last = 0xFFFF, default = 0x0100}
+
+[configuration.values]
+rp2040_hal.Flash_Chip = "w25qxx"
+usb_embedded.Event_Log_Buffer_Size = 100
+
+[[depends-on]]
+rp2040_hal = "^2.2.0"
+usb_embedded = "*"
+
+[[pins]]
+usb_embedded = { path='..' }
+
+[build-profiles]
+usb_embedded = 'development'
